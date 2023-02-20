@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         keyForValuesList = firstSelectOfValues.options[firstSelectOfValues.selectedIndex].text;
 
-        for (const i in valueList[keyForValuesList]) {
+        for (const i in valueListForLength[keyForValuesList]) {
             let opt = document.createElement('option');
             opt.value = i;
             opt.innerHTML = i;
@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         else if (first.value) {
-            answer.textContent = Number(first.value) * valueList[keyForValuesList][keyForValuesOfValues].multiple + valueList[keyForValuesList][keyForValuesOfValues].CI;
+            answer.textContent = Number(first.value) * valueListForLength[keyForValuesList][keyForValuesOfValues].multiple + valueListForLength[keyForValuesList][keyForValuesOfValues].CI;
         }
  
     })
