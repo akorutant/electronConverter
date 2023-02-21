@@ -1,17 +1,5 @@
 const valueListForLength = {
     "Вёрст": {
-        "Пяди": {
-
-        },
-
-        "Вершки": {
-
-        },
-
-        "Линии": {
-
-        },
-
         "Сажень": {
             multiple: 500,
             CI: " c"
@@ -25,6 +13,19 @@ const valueListForLength = {
         "Аршины": {
             multiple: 1500,
             CI: " ар"
+        },
+
+        "Пяди": {
+            multiple: 1/375,
+            CI: " п"
+        },
+
+        "Вершки": {
+
+        },
+
+        "Линии": {
+
         },
 
         "Километры": {
@@ -81,6 +82,21 @@ const valueListForLength = {
         "Футы": {
             multiple: 2 * (1 / 3),
             CI: " ф"
+        },
+
+        "Пядь": {
+            multiple: 1/4,
+            CI: " п"
+        },
+
+        "Вершки": {
+            multiple: 1/16,
+            CI: " в"
+        },
+
+        "Линии": {
+            multiple: 1/280,
+            CI: " л"
         },
 
         "Километры": {
@@ -182,7 +198,7 @@ const valueListForLength = {
 
     "Пядей": {
         "Вёрсты": {
-            multiple: ,
+            multiple: 375,
             CI: " в"
         },
 
