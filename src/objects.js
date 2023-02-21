@@ -21,11 +21,13 @@ const valueListForLength = {
         },
 
         "Вершки": {
-
+            multiple: 93.75,
+            CI: " в"
         },
 
         "Линии": {
-
+            multiple: 5.36,
+            CI: " л"
         },
 
         "Километры": {
