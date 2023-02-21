@@ -10,22 +10,34 @@
 <body>
     <h1>Простой сервис конвертации</h1>
     <p>Из</p>
+    <div id="divForRadioButtons"> 
+        <form id="radioButtons">
+            <input type="radio" id="radioButtonLength" name="measurement" value="length" checked>
+            <label for="radioButtonLength">Меры длины</label>
+        
+            <input type="radio" id="radioButtonSquare" name="measurement" value="square">
+            <label for="radioButtonSquare">Меры площади</label>
+    
+            <input type="radio" id="radioButtonVolume" name="measurement" value="volume">
+            <label for="radioButtonVolume">Меры объёма</label>
+        </form>
+    </div>
+
+
     <select id="firstSelect" name="firstSelect">
         <option>Вёрст</option>
-        <option>Десятин</option>
         <option>Фунтов</option>
         <option>Аршинов</option>
         <option>Футов</option>
         <option>Сажень</option>
         <option>Пядей</option>
-        <option>Вершок</option>
-        <option>Линий</option>
     </select>
     <p>В</p>
     <select id="secondSelect" name="secondSelect">
         <option>Сажень</option>
         <option>Футы</option>
         <option>Аршины</option>
+        <option>Пяди</option>
         <option>Километры</option>
         <option>Метры</option>
         <option>Сантиметры</option>
@@ -42,6 +54,7 @@
     <p id="answer"></p>
 
     <script src="objects.js"></script>
+    <script src="functions.js"></script>
     <script src="renderer.js"></script>
 </body>
 </html>

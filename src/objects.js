@@ -20,16 +20,6 @@ const valueListForLength = {
             CI: " п"
         },
 
-        "Вершки": {
-            multiple: 93.75,
-            CI: " в"
-        },
-
-        "Линии": {
-            multiple: 5.36,
-            CI: " л"
-        },
-
         "Километры": {
             multiple: 1.0668,
             CI: " км"
@@ -51,7 +41,6 @@ const valueListForLength = {
         }
 
     },
-
 
     "Фунтов": {
         "Килограммы": {
@@ -89,16 +78,6 @@ const valueListForLength = {
         "Пядь": {
             multiple: 1/4,
             CI: " п"
-        },
-
-        "Вершки": {
-            multiple: 1/16,
-            CI: " в"
-        },
-
-        "Линии": {
-            multiple: 1/280,
-            CI: " л"
         },
 
         "Километры": {
@@ -139,6 +118,11 @@ const valueListForLength = {
             CI: " ар"
         },
 
+        "Пядь": {
+            multiple: 7/12,
+            CI: " п"
+        },
+
         "Километры": {
             multiple: 0.0003048,
             CI: " км"
@@ -176,6 +160,11 @@ const valueListForLength = {
           CI: " ф"  
         },
 
+        "Пядь": {
+            multiple: 1/12,
+            CI: " п"
+        },
+
         "Километры": {
             multiple: 0.0021336,
             CI: " км"
@@ -204,6 +193,11 @@ const valueListForLength = {
             CI: " в"
         },
 
+        "Сажень": {
+            multiple: 12,
+            CI: " с"
+        },
+
         "Аршины": {
             multiple: 1/4,
             CI: " ар"
@@ -220,7 +214,8 @@ const valueListForLength = {
         },
 
         "Метры": {
-            multiple: 0.1778
+            multiple: 0.1778,
+            CI: " м"
         },
 
         "Сантиметры": {
@@ -232,69 +227,8 @@ const valueListForLength = {
             multiple: 1778,
             CI: " мм"
         },
-    },
-
-    "Вершок": {
-        "Аршины": {
-            multiple: 1/16,
-            CI: " ар"
-        },
-
-        "Футы": {
-            multiple: 7/48,
-            CI: " ф"
-        },
-
-        "Километры": {
-            multiple: 0.00004455,
-            CI: " км"
-        },
-
-        "Метры": {
-            multiple: 0.04455,
-            CI: " м"
-        },
-
-        "Сантиметры": {
-            multiple: 4.445,
-            CI: " см" 
-        },
-
-        "Миллиметры": {
-            multiple: 44.45,
-            CI: " мм" 
-        }
-
-    },
-
-    "Линий": {
-        "Аршины": {
-            multiple: 1/2800,
-            CI: " ар"
-        },
-
-        "Футы": {
-            multiple: 1/120,
-            CI: " ф"
-        },
-
-        "Метры": {
-            multiple: 0.00254,
-            CI: " м"
-        },
-
-        "Сантиметры": {
-            multiple: 0.254,
-            CI: " см"
-        },
-
-        "Миллиметры": {
-            multiple: 2.54,
-            CI: " мм" 
-        }
-
     }
-}
+};
 
 const valueListForSquare = {
     "Десятин": {
@@ -323,4 +257,8 @@ const valueListForSquare = {
             CI: " м²"
         }
     },
-}
+};
+
+const valueListForVolume = {
+
+};
