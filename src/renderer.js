@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     button.addEventListener("click", () => {
         let keyForValuesOfValues = secondSelectOfValues.options[secondSelectOfValues.selectedIndex].text;
         if (!isNumeric(first.value)) {
-            console.log("error");
+            answer.textContent = "Указать можно только числа!";
         }
 
         else if (first.value) {
