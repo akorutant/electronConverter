@@ -1,33 +1,46 @@
 const isNumeric = n => !isNaN(n);
 
 window.addEventListener('DOMContentLoaded', () => {
-    let first = document.getElementById("firstElement");
+    let first = document.querySelector("#firstElement");
+    let answer = document.querySelector("#answer");
 
-    let firstSelectOfValues = document.getElementById("firstSelect")
-    let keyForValuesList = firstSelectOfValues.options[firstSelectOfValues.selectedIndex].text;
-    let secondSelectOfValues = document.getElementById("secondSelect");
 
-    let answer = document.getElementById("answer");
-    let button = document.getElementById("button");
+    let radioButtons = document.querySelectorAll("input[type='radio']")
+    radioButtons.forEach((rbn) => {
+        rbn.addEventListener("click", (e) => {
+            let topSelect = document.querySelectorAll(".top-select")
+            let bottomSelect = document.querySelectorAll(".bottom-select")
+            topSelect.forEach((select) => {select.classList.remove("show")})
+            bottomSelect.forEach((select) => {select.classList.remove("show")})
+            if (e.target.value === 'volume') {
+                topSelect[2].classList.add("show")
+                bottomSelect[2].classList.add("show")
+            }
+            if (e.target.value === 'square') {
+                console.log(topSelect)
+                topSelect[1].classList.add("show")
+                bottomSelect[1].classList.add("show")
+            }
+            if (e.target.value === 'length') {
+                topSelect[0].classList.add("show")
+                bottomSelect[0].classList.add("show")
+            }
+        })
+    })
 
-    loadListMeasurement(keyForValuesList, valueListForLength)
-
-    firstSelectOfValues.addEventListener("change", () => {
-        keyForValuesList = firstSelectOfValues.options[firstSelectOfValues.selectedIndex].text;
-        loadListMeasurement(keyForValuesList,valueListForLength);
-    });
-
-    button.addEventListener("click", () => {
-        let keyForValuesOfValues = secondSelectOfValues.options[secondSelectOfValues.selectedIndex].text;
+    let button = document.querySelector("#button")
+    button.addEventListener("click", (e) => {
+        let top = document.querySelector(".top-select.show")
+        let bottom = document.querySelector(".bottom-select.show")
+        let values = getValueList(top.dataset.type);
+        
         if (!isNumeric(first.value)) {
             answer.textContent = "Указать можно только числа!";
         }
 
         else if (first.value) {
-            let values = getValueList();
-            answer.textContent = Number(first.value) * values[keyForValuesList][keyForValuesOfValues].multiple + values[keyForValuesList][keyForValuesOfValues].CI;
+            answer.textContent = Number(first.value) * values[top.value][bottom.value].multiple + values[top.value][bottom.value].CI;
         }
  
     })
-
-  })
+})

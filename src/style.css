@@ -1,0 +1,11 @@
+::-webkit-scrollbar {
+    display: none;
+    }
+
+.show {
+    display: inline;
+}
+
+select {
+    display: none;
+}
