@@ -3,27 +3,27 @@ const isNumeric = n => !isNaN(n);
 window.addEventListener('DOMContentLoaded', () => {
     let first = document.querySelector("#firstElement");
     let answer = document.querySelector("#answer");
-
+    let selectOfValues = document.querySelector("#firstSelectLength");
 
     let radioButtons = document.querySelectorAll("input[type='radio']")
     radioButtons.forEach((rbn) => {
         rbn.addEventListener("click", (e) => {
             let topSelect = document.querySelectorAll(".top-select")
-            let bottomSelect = document.querySelectorAll(".bottom-select")
             topSelect.forEach((select) => {select.classList.remove("show")})
-            bottomSelect.forEach((select) => {select.classList.remove("show")})
             if (e.target.value === 'volume') {
-                topSelect[2].classList.add("show")
-                bottomSelect[2].classList.add("show")
+                selectOfValues = document.querySelector("#firstSelectVolume");
+                topSelect[2].classList.add("show");
+                loadListData(selectOfValues, valueListForVolume);
             }
             if (e.target.value === 'square') {
-                console.log(topSelect)
+                selectOfValues = document.querySelector("#firstSelectSquare");
                 topSelect[1].classList.add("show")
-                bottomSelect[1].classList.add("show")
+                loadListData(selectOfValues, valueListForSquare);
             }
             if (e.target.value === 'length') {
-                topSelect[0].classList.add("show")
-                bottomSelect[0].classList.add("show")
+                selectOfValues = document.querySelector("#firstSelectLength");
+                topSelect[0].classList.add("show");
+                loadListData(selectOfValues, valueListForLength);
             }
         })
     })

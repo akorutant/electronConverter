@@ -1,0 +1,49 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.show {
+    display: inline;
+}
+
+select {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+}
+
+aside {
+    background-color: blue;
+    width: 60px;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.show {
+    width: 200px;
+}
+
+.burger {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+section {
+    background-color: white;
+    flex-grow: 1;
+}

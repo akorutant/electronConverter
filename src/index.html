@@ -2,14 +2,30 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="styles/material.min.css">
+    <script src="styles/material.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <link rel="stylesheet" href="styles/css/style.css">
+    <link rel="stylesheet" href="styles/css/font-awesome.min.css">
     <title>Русская система мер</title>
 </head>
 <body>
-    <h1>Простой сервис конвертации</h1>
+    <main>
+    <aside>
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored burger">
+            <i class="material-icons">X</i>
+        </button>
+
+        <a href="#">
+            <i class="fa fa-question" aria-hidden="false"></i>
+        </a>
+
+        <a href="#">
+            <i class="fa fa-address-card" aria-hidden="false"></i>
+        </a>
+    </aside>
+    <section>
+        <h1>Простой сервис конвертации</h1>
     <p>Из</p>
     <div id="divForRadioButtons"> 
         <form id="radioButtons">
@@ -21,6 +37,9 @@
     
             <input type="radio" id="radioButtonVolume" name="measurement" value="volume">
             <label for="radioButtonVolume">Меры объёма</label>
+
+            <input type="radio" id="radioButtonMass" name="measurement" value="mass">
+            <label for="radioButtonVolume">Меры массы</label>
         </form>
     </div>
 
@@ -33,9 +52,9 @@
         <option>Сажень</option>
         <option>Пядей</option>
     </select>
-    <select class="top-select" id="firstSelectForSquare" name="firstSelectForSquare" data-type="square">
+    <select class="top-select" id="firstSelectSquare" name="firstSelectForSquare" data-type="square">
         <option>Десятин</option>
-        <option>Фунтов</option>
+        <option>Вёрст</option>
         <option>Аршинов</option>
         <option>Футов</option>
         <option>Сажень</option>
@@ -43,13 +62,10 @@
 
     </select>
 
-    <select class="top-select" id="firstSelectForVolume" name="firstSelectForVolume" data-type="volume">
-        <option>Вёрст</option>
-        <option>Фунтов</option>
+    <select class="top-select" id="firstSelectVolume" name="firstSelectForVolume" data-type="volume">
+        <option>Сажени</option>
         <option>Аршинов</option>
         <option>Футов</option>
-        <option>Сажень</option>
-        <option>Пядей</option>
     </select>
     <p>В</p>
     <select class="bottom-select show" id="secondSelectLength" name="secondSelectLength" data-type="length">
@@ -64,6 +80,10 @@
     </select>
 
     <select class="bottom-select" id="secondSelectForSquare" name="secondSelectForSquare" data-type="square">
+        <option>Десятины</option>
+        <option>Вёрстs</option>
+        <option>Аршинs</option>
+        <option>Футов</option>
         <option>Сажень</option>
         <option>Гектары</option>
         <option>Сотки</option>
@@ -82,6 +102,12 @@
         <option>Миллиметры</option>
     </select>
 
+    <select class="bottom-select" id="secondSelectMass" name="secondSelectMass" data-type="mass">
+        <option>Килограммы</option>
+        <option>Граммы</option>
+        <option>Миллиграммы</option>
+    </select>
+
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="firstElement"
         oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
@@ -91,6 +117,8 @@
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" 
     id="button">Высчитать</button>
     <p id="answer"></p>
+    </section>
+</main>
 
     <script src="objects.js"></script>
     <script src="functions.js"></script>
