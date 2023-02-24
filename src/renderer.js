@@ -3,27 +3,31 @@ const isNumeric = n => !isNaN(n);
 window.addEventListener('DOMContentLoaded', () => {
     let first = document.querySelector("#firstElement");
     let answer = document.querySelector("#answer");
-    let selectOfValues = document.querySelector("#firstSelectLength");
 
     let radioButtons = document.querySelectorAll("input[type='radio']")
     radioButtons.forEach((rbn) => {
         rbn.addEventListener("click", (e) => {
             let topSelect = document.querySelectorAll(".top-select")
+            let bottomSelect = document.querySelectorAll(".bottom-select")
             topSelect.forEach((select) => {select.classList.remove("show")})
+            bottomSelect.forEach((bottom) => {bottom.classList.remove("show")})
             if (e.target.value === 'volume') {
-                selectOfValues = document.querySelector("#firstSelectVolume");
                 topSelect[2].classList.add("show");
-                loadListData(selectOfValues, valueListForVolume);
+                bottomSelect[2].classList.add("show");
             }
             if (e.target.value === 'square') {
-                selectOfValues = document.querySelector("#firstSelectSquare");
-                topSelect[1].classList.add("show")
-                loadListData(selectOfValues, valueListForSquare);
+                console.log(topSelect[2]);
+                topSelect[1].classList.add("show");
+                bottomSelect[1].classList.add("show");
             }
             if (e.target.value === 'length') {
-                selectOfValues = document.querySelector("#firstSelectLength");
                 topSelect[0].classList.add("show");
-                loadListData(selectOfValues, valueListForLength);
+                bottomSelect[0].classList.add("show");
+            }
+
+            if (e.target.value === "mass") {
+                topSelect[3].classList.add("show");
+                bottomSelect[3].classList.add("show");
             }
         })
     })

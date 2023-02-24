@@ -1,5 +1,10 @@
 const valueListForLength = {
     "Вёрст": {
+        "Вёрсты": {
+            multiple: 1,
+            CI: " в"
+        },
+
         "Сажень": {
             multiple: 500,
             CI: " c"
@@ -43,6 +48,11 @@ const valueListForLength = {
     },
 
     "Аршинов": {
+        "Аршины": {
+            multiple: 1,
+            CI: " ар"
+        },
+
         "Вёрсты": {
             multiple: 1/1500,
             CI: " в"
@@ -86,6 +96,11 @@ const valueListForLength = {
     },
 
     "Футов": {
+        "Футы": {
+            multiple: 1,
+            CI: " ф"
+        },
+
         "Вёрсты": {
             multiple: 1/3500,
             CI: " в"
@@ -128,6 +143,11 @@ const valueListForLength = {
     },
 
     "Сажень": {
+        "Сажень": {
+            multiple: 1,
+            CI: " с"
+        },
+
         "Вёрсты": {
             multiple: 1/500,
             CI: " в"
@@ -171,6 +191,11 @@ const valueListForLength = {
     },
 
     "Пядей": {
+        "Пяди": {
+            multiple: 1,
+            CI: " п"
+        },
+
         "Вёрсты": {
             multiple: 375,
             CI: " в"
