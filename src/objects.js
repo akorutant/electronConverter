@@ -1,11 +1,6 @@
 const valueList = {
     "length": {
         "Вёрст": {
-            "Вёрсты": {
-                multiple: 1,
-                CI: " в"
-            },
-
             "Сажень": {
                 multiple: 500,
                 CI: " c"
@@ -49,11 +44,6 @@ const valueList = {
         },
 
         "Аршинов": {
-            "Аршины": {
-                multiple: 1,
-                CI: " ар"
-            },
-
             "Вёрсты": {
                 multiple: 1 / 1500,
                 CI: " в"
@@ -97,11 +87,6 @@ const valueList = {
         },
 
         "Футов": {
-            "Футы": {
-                multiple: 1,
-                CI: " ф"
-            },
-
             "Вёрсты": {
                 multiple: 1 / 3500,
                 CI: " в"
@@ -144,11 +129,6 @@ const valueList = {
         },
 
         "Сажень": {
-            "Сажень": {
-                multiple: 1,
-                CI: " с"
-            },
-
             "Вёрсты": {
                 multiple: 1 / 500,
                 CI: " в"
@@ -192,11 +172,6 @@ const valueList = {
         },
 
         "Пядей": {
-            "Пяди": {
-                multiple: 1,
-                CI: " п"
-            },
-
             "Вёрсты": {
                 multiple: 375,
                 CI: " в"
@@ -240,11 +215,6 @@ const valueList = {
     },
     "square": {
         "Десятин": {
-            "Десятины": {
-                multiple: 1,
-                CI: " д"
-            },
-
             "Аршины": {
                 multiple: 0.505805 / 10925.4,
                 CI: " ар"
@@ -282,29 +252,19 @@ const valueList = {
         },
 
         "Вёрст": {
-            "Вёрсты": {
-                multiple: 1,
-                CI: " в"
-            },
-
             "Сажень": {
                 multiple: 250000,
                 CI: " c"
             },
 
             "Футы": {
-                multiple: 3500,
+                multiple: 9.290304 / 1138.1,
                 CI: " ф"
             },
 
             "Аршины": {
-                multiple: 1500,
+                multiple: 0.505805 / 1138.1 * 250000,
                 CI: " ар"
-            },
-
-            "Пяди": {
-                multiple: 1 / 375,
-                CI: " п"
             },
 
             "Километры": {
@@ -319,13 +279,8 @@ const valueList = {
         },
 
         "Аршинов": {
-            "Аршины": {
-                multiple: 1,
-                CI: " ар"
-            },
-
             "Вёрсты": {
-                multiple: 1 / 1500,
+                multiple: 10925.4 / 0.505805,
                 CI: " в"
             },
 
