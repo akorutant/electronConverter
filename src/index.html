@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Русская система мер</title>
-
     <link rel="stylesheet" href="styles/material.min.css">
-
     <script src="styles/material.min.js"></script>
+    <script src="./renderer.js"></script>
     <script src="./objects.js"></script>
-    <script src="./script.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="styles/css/font-awesome.min.css">
-
 </head>
 
 <body>
@@ -27,8 +24,8 @@
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
                 <a href="#fixed-tab-1" onclick="setCurrentCI('length')" class="mdl-layout__tab is-active">Длина</a>
                 <a href="#fixed-tab-2" onclick="setCurrentCI('square')" class="mdl-layout__tab">Площадь</a>
-                <a href="#fixed-tab-3" class="mdl-layout__tab">Объём</a>
-                <a href="#fixed-tab-4" class="mdl-layout__tab">Масса</a>
+                <a href="#fixed-tab-3" onclick="setCurrentCI('volume')" class="mdl-layout__tab">Объём</a>
+                <a href="#fixed-tab-4" onclick="setCurrentCI('mass')" class="mdl-layout__tab">Масса</a>
             </div>
         </header>
         <div class="mdl-layout__drawer">
@@ -69,7 +66,7 @@
                     </div>
                 </section>
             </div>
-
+            
             <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                 <div class="mdl-card mdl-cell mdl-cell--12-col">
                     <div class="mdl-card__supporting-text">
@@ -93,4 +90,5 @@
         </main>
     </div>
 </body>
+
 </html>
