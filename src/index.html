@@ -11,6 +11,7 @@
     <script src="styles/material.min.js"></script>
     <script src="./objects.js"></script>
     <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="styles/css/font-awesome.min.css">
 
@@ -33,9 +34,8 @@
         <div class="mdl-layout__drawer">
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="#">🌠 Конвертатор</a>
-                <a class="mdl-navigation__link" href="#" id="valuelink" url="https://clck.ru/33dFmP">История величин</a>
-                <a class="mdl-navigation__link" href="#" id="devlink" url="https://akoru.works">О
-                    авторе</a>
+                <a class="mdl-navigation__link" href="#" id="valueslink">История величин</a>
+                <a class="mdl-navigation__link" href="#" id="devlink">О авторе</a>
             </nav>
         </div>
         <main class="mdl-layout__content" style="padding: 16px">
@@ -46,7 +46,6 @@
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
                         <div class="mdl-card__supporting-text">
                             <h4>Выберите исходную меру</h4>
-                            вставь туда какой-то крутой интересный текст стильный модный<br>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <select class="mdl-textfield__input" id="from" name="from">
                                 </select>
@@ -61,7 +60,6 @@
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
                         <div class="mdl-card__supporting-text">
                             <h4>Выберите выходную меру</h4>
-                            сюда тоже вставь какой-то текст топ 10 фактов о беременных бегемотах<br>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <select class="mdl-textfield__input" id="to" name="to">
                                 </select>
@@ -76,8 +74,6 @@
                 <div class="mdl-card mdl-cell mdl-cell--12-col">
                     <div class="mdl-card__supporting-text">
                         <h4>Введите число и узнайте результат</h4>
-                        ты же сам посчитать не можешь<br>
-
                         <div class="mdl-textfield mdl-js-textfield">
                             <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="number">
                             <label class="mdl-textfield__label" for="number">Число...</label>
@@ -97,5 +93,4 @@
         </main>
     </div>
 </body>
-
 </html>

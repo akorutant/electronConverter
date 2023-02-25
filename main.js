@@ -8,9 +8,9 @@ function createWindow () {
     height: 600,
     webPreferences: {
       nodeIntegration: true,
-      devTools: true,
       preload: path.join(__dirname, 'src/preload.js')
-    }
+    },
+    resizable: false
   })
   win.setMenu(null)
   win.loadFile('src/index.html')

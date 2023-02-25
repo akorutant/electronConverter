@@ -3,12 +3,10 @@ const ipc = electron.ipcRenderer
 
 window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#devlink').addEventListener("click", function () {
-        let active_hotspot_id = localStorage.getItem('active_hotspot_id')
-        const reply = ipc.sendSync('hotspot-event', active_hotspot_id)
+        const reply = ipc.sendSync('hotspot-event', "https://akoru.works")
     });
 
     document.querySelector('#valueslink').addEventListener("click", function () {
-        let active_hotspot_id = localStorage.getItem('active_hotspot_id')
-        const reply = ipc.sendSync('hotspot-event', active_hotspot_id)
+        const reply = ipc.sendSync('hotspot-event', "https://clck.ru/33dFmP")
     });
 })
