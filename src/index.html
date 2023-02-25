@@ -20,7 +20,7 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
     mdl-layout--fixed-tabs">
         <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row" >
+            <div class="mdl-layout__header-row">
                 <span class="mdl-layout-title">🌠 Конвертатор</span>
             </div>
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
@@ -30,42 +30,47 @@
                 <a href="#fixed-tab-4" class="mdl-layout__tab">Масса</a>
             </div>
         </header>
-        <div class="mdl-layout__drawer" >
-              <nav class="mdl-navigation">
+        <div class="mdl-layout__drawer">
+            <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="#">🌠 Конвертатор</a>
                 <a class="mdl-navigation__link" href="#" id="valuelink" url="https://clck.ru/33dFmP">История величин</a>
-                <a class="mdl-navigation__link" href="#" id="devlink" url="https://akoru.works">О авторе</a>
-              </nav>
+                <a class="mdl-navigation__link" href="#" id="devlink" url="https://akoru.works">О
+                    авторе</a>
+            </nav>
         </div>
         <main class="mdl-layout__content" style="padding: 16px">
 
-            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                <div class="mdl-card mdl-cell mdl-cell--12-col">
-                    <div class="mdl-card__supporting-text">
-                        <h4>Выберите исходную меру</h4>
-                        вставь туда какой-то крутой интересный текст стильный модный<br>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <select class="mdl-textfield__input" id="from" name="from">
-                            </select>
-                            <label class="mdl-textfield__label" for="from">Исходная мера</label>
+            <div class="mdl-grid from-to-sections">
+                <section
+                    class="section--center mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__supporting-text">
+                            <h4>Выберите исходную меру</h4>
+                            вставь туда какой-то крутой интересный текст стильный модный<br>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <select class="mdl-textfield__input" id="from" name="from">
+                                </select>
+                                <label class="mdl-textfield__label" for="from">Исходная мера</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                <div class="mdl-card mdl-cell mdl-cell--12-col">
-                    <div class="mdl-card__supporting-text">
-                        <h4>Выберите выходную меру</h4>
-                        сюда тоже вставь какой-то текст топ 10 фактов о беременных бегемотах<br>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <select class="mdl-textfield__input" id="to" name="to">
-                            </select>
-                            <label class="mdl-textfield__label" for="to">Выходная мера</label>
+                <section
+                    class="section--center mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__supporting-text">
+                            <h4>Выберите выходную меру</h4>
+                            сюда тоже вставь какой-то текст топ 10 фактов о беременных бегемотах<br>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <select class="mdl-textfield__input" id="to" name="to">
+                                </select>
+                                <label class="mdl-textfield__label" for="to">Выходная мера</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
 
             <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                 <div class="mdl-card mdl-cell mdl-cell--12-col">
@@ -92,4 +97,5 @@
         </main>
     </div>
 </body>
+
 </html>

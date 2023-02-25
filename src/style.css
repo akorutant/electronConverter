@@ -10,8 +10,9 @@ select {
     display: none;
 } */
 
-.mdl-layout__content>section {
-    margin: 15px 0;
+.from-to-sections {
+    margin: 0 -8px 8px;
+    padding: 0;
 }
 
 .result-text:first {
@@ -20,4 +21,8 @@ select {
 
 .result-text {
     font-weight: 600;
+}
+
+h4 {
+    margin: 0 0 16px;
 }
