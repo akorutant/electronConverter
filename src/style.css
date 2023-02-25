@@ -1,6 +1,6 @@
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
-    }
+}
 
 .show {
     display: inline;
@@ -8,4 +8,13 @@
 
 select {
     display: none;
+} */
+
+.mdl-layout__content>section {
+    margin: 15px 0;
+}
+
+.result-text {
+    margin-left: 5px;
+    font-weight: 600;
 }
