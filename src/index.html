@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="styles/material.min.css">
 
     <script src="styles/material.min.js"></script>
+    <script src="./objects.js"></script>
     <script src="./script.js"></script>
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="styles/css/font-awesome.min.css">
 
@@ -20,18 +20,22 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
     mdl-layout--fixed-tabs">
         <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row">
+            <div class="mdl-layout__header-row" >
                 <span class="mdl-layout-title">🌠 Конвертатор</span>
             </div>
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Длина</a>
-                <a href="#fixed-tab-2" class="mdl-layout__tab">Площадь</a>
+                <a href="#fixed-tab-1" onclick="setCurrentCI('length')" class="mdl-layout__tab is-active">Длина</a>
+                <a href="#fixed-tab-2" onclick="setCurrentCI('square')" class="mdl-layout__tab">Площадь</a>
                 <a href="#fixed-tab-3" class="mdl-layout__tab">Объём</a>
                 <a href="#fixed-tab-4" class="mdl-layout__tab">Масса</a>
             </div>
         </header>
-        <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">🌠 Конвертатор</span>
+        <div class="mdl-layout__drawer" >
+              <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="#">🌠 Конвертатор</a>
+                <a class="mdl-navigation__link" href="#" id="valuelink" url="https://clck.ru/33dFmP">История величин</a>
+                <a class="mdl-navigation__link" href="#" id="devlink" url="https://akoru.works">О авторе</a>
+              </nav>
         </div>
         <main class="mdl-layout__content" style="padding: 16px">
 
@@ -42,10 +46,6 @@
                         вставь туда какой-то крутой интересный текст стильный модный<br>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <select class="mdl-textfield__input" id="from" name="from">
-                                <option></option>
-                                <option value="cm">Сантиметры</option>
-                                <option value="m">Метры</option>
-                                <option value="km">Километры</option>
                             </select>
                             <label class="mdl-textfield__label" for="from">Исходная мера</label>
                         </div>
@@ -60,10 +60,6 @@
                         сюда тоже вставь какой-то текст топ 10 фактов о беременных бегемотах<br>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <select class="mdl-textfield__input" id="to" name="to">
-                                <option></option>
-                                <option value="cm">Сантиметры</option>
-                                <option value="m">Метры</option>
-                                <option value="km">Километры</option>
                             </select>
                             <label class="mdl-textfield__label" for="to">Выходная мера</label>
                         </div>
@@ -81,10 +77,12 @@
                             <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="number">
                             <label class="mdl-textfield__label" for="number">Число...</label>
                             <span class="mdl-textfield__error">Вы ввели не число!</span>
-                        </div> <span class="result-text">= ...</span>
+                        </div>
+                        <span class="result-text" id="label-ci"></span>
+                        <span class="result-text" id="label-result">= ...</span>
 
                         <br>
-                        <button onclick="calculate()"
+                        <button id="btn-calculate"
                             class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                             Высчитать
                         </button>
@@ -94,5 +92,4 @@
         </main>
     </div>
 </body>
-
 </html>

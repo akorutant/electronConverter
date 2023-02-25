@@ -1,4 +1,5 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow} = require('electron')
+const { ipcMain } = require('electron')
 const path = require('path')
 
 function createWindow () {
@@ -6,6 +7,8 @@ function createWindow () {
     width: 800,
     height: 600,
     webPreferences: {
+      nodeIntegration: true,
+      devTools: true,
       preload: path.join(__dirname, 'src/preload.js')
     }
   })
@@ -21,6 +24,11 @@ app.whenReady().then(() => {
       createWindow()
     }
   })
+})
+
+ipcMain.on('hotspot-event', (event, url) => {
+  event.returnValue = 'Message received!'
+  require('electron').shell.openExternal(url);
 })
 
 app.on('window-all-closed', () => {

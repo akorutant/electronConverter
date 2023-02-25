@@ -1,7 +1,14 @@
+const electron = require('electron')
+const ipc = electron.ipcRenderer
+
 window.addEventListener('DOMContentLoaded', () => {
-    let burger = document.querySelector(".burger")
-    let aside = document.querySelector("aside")
-    burger.addEventListener("click", (e) => {
-      aside.classList.toggle('show');
-  })
+    document.querySelector('#devlink').addEventListener("click", function () {
+        let active_hotspot_id = localStorage.getItem('active_hotspot_id')
+        const reply = ipc.sendSync('hotspot-event', active_hotspot_id)
+    });
+
+    document.querySelector('#valueslink').addEventListener("click", function () {
+        let active_hotspot_id = localStorage.getItem('active_hotspot_id')
+        const reply = ipc.sendSync('hotspot-event', active_hotspot_id)
+    });
 })

@@ -14,7 +14,10 @@ select {
     margin: 15px 0;
 }
 
-.result-text {
+.result-text:first {
     margin-left: 5px;
+}
+
+.result-text {
     font-weight: 600;
 }
