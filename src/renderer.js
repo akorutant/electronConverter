@@ -1,3 +1,4 @@
+const isNumber = n => !isNaN(n);
 let currentCI = "length";
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -19,8 +20,13 @@ window.addEventListener('DOMContentLoaded', () => {
         const fromValue = document.querySelector("#from").value;
         const toValue = document.querySelector("#to").value;
         const numValue = document.querySelector("#number").value;
-
-        resultLabel.innerText = `= ${numValue * valueList[currentCI][fromValue][toValue]["multiple"]} ${toValue}`
+        if (isNumber(numValue)) {
+            resultLabel.innerText = `= ${numValue * valueList[currentCI][fromValue][toValue]["multiple"]} ${toValue}`;
+        }
+        
+        else {
+            resultLabel.innerText = " = Нужно ввести число!";
+        }
     });
 })
 

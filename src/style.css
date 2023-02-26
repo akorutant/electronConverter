@@ -18,3 +18,12 @@
 h4 {
     margin: 0 0 16px;
 }
+
+body {
+    -youbkit-touch-callout: none; /* Сафари для iOS */
+    -youbkit-user-select: none;   /* Chrome 6.0+, Safari 3.1+, Edge и Opera 15+ */
+    -moz-user-select: none;    /* Fire Fox */
+    -ms-user-select: none;        /* IE 10+ и Edge */
+    user-select: none;            /* Версия без префикса,
+                                в настоящее время поддерживается Chrome и Opera */
+}
