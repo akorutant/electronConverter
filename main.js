@@ -10,6 +10,7 @@ function createWindow () {
       nodeIntegration: true,
       preload: path.join(__dirname, 'src/preload.js')
     },
+    icon: __dirname + '/src/icon.ico',
     resizable: false
   })
   win.setMenu(null)
